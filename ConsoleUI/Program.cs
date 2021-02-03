@@ -4,13 +4,15 @@ using System;
 
 namespace ConsoleUI
 {
+    //SOLID
+    //Open Closed Principle
     class Program
     {
         static void Main(string[] args)
         {
-            ProductManager productManager = new ProductManager(new InMemoryProductDal());
+            ProductManager productManager = new ProductManager(new EfProductDal());
 
-            foreach (var item in productManager.GetAll())
+            foreach (var item in productManager.GetByUnitPrice(40,100))
             {
                 Console.WriteLine(productManager.ProductName);
             }
