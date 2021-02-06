@@ -1,5 +1,6 @@
 ﻿using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -73,7 +74,7 @@ namespace DataAccess.Concrete.InMemory
             productToUpdate.UnitsInStock = product.UnitsInStock;
         }
 
-        public List<Product> GetAllByCategory(int categoryId)
+        public List<Product> GetAllByCategoryId(int categoryId)
         {
             //where içindeki şarta uyan bütün elemanları yeni bir liste haline getirip onu döndürür. 
            return _products.Where(p => p.CategoryId == categoryId).ToList();
@@ -85,6 +86,11 @@ namespace DataAccess.Concrete.InMemory
         }
 
         public Product Get(Expression<Func<Product, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<ProductDetailDto> GetProductDetails()
         {
             throw new NotImplementedException();
         }

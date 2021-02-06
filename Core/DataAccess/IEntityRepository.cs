@@ -1,10 +1,14 @@
-﻿using Entities.Abstract;
+﻿using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace DataAccess.Abstract
+
+//namespace=Classları interfaceleri belirli bir isim uzayının içine bırakıyoruz.
+//Core bizim evrensel katmanımız. Tüm .net projelerinde kullanılabilr anlamına gelir. 
+//Core katmanı diğer katmanları referans almaz. 
+namespace Core.DataAccess 
 {
     //Generic Constraint - Generic Kısıt
     //class: referans tip olabilir anlamına gelir
