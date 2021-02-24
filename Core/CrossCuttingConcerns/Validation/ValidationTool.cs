@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FluentValidation;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,6 +15,6 @@ namespace Core.CrossCuttingConcerns.Validation
             {
                 throw new ValidationException(result.Errors);
             }
+        }
     }
-}
 }
